@@ -13,7 +13,6 @@
 		D5341121253C89D0002C59A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5341120253C89D0002C59A5 /* Assets.xcassets */; };
 		D5341124253C89D0002C59A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5341122253C89D0002C59A5 /* LaunchScreen.storyboard */; };
 		D534112F253C89D0002C59A5 /* PalmuDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534112E253C89D0002C59A5 /* PalmuDemoTests.swift */; };
-		D5341140253C8AC4002C59A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D534113F253C8AC4002C59A5 /* GoogleService-Info.plist */; };
 		D5341144253C9522002C59A5 /* FireAuth+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5341143253C9522002C59A5 /* FireAuth+Extension.swift */; };
 		D5341146253C952F002C59A5 /* Firestore+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5341145253C952F002C59A5 /* Firestore+Extension.swift */; };
 		D5341148253C954F002C59A5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5341147253C954F002C59A5 /* AuthService.swift */; };
@@ -71,7 +70,6 @@
 		D534112A253C89D0002C59A5 /* PalmuDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalmuDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D534112E253C89D0002C59A5 /* PalmuDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalmuDemoTests.swift; sourceTree = "<group>"; };
 		D5341130253C89D0002C59A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D534113F253C8AC4002C59A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5341143253C9522002C59A5 /* FireAuth+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FireAuth+Extension.swift"; sourceTree = "<group>"; };
 		D5341145253C952F002C59A5 /* Firestore+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Extension.swift"; sourceTree = "<group>"; };
 		D5341147253C954F002C59A5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				D5341125253C89D0002C59A5 /* Info.plist */,
-				D534113F253C8AC4002C59A5 /* GoogleService-Info.plist */,
 				D54FA010253E22B40077820B /* Constants.swift */,
 				D5341122253C89D0002C59A5 /* LaunchScreen.storyboard */,
 			);
@@ -416,7 +413,6 @@
 			files = (
 				D5341124253C89D0002C59A5 /* LaunchScreen.storyboard in Resources */,
 				D54F9FFC253DF80B0077820B /* Matching.storyboard in Resources */,
-				D5341140253C8AC4002C59A5 /* GoogleService-Info.plist in Resources */,
 				D5341121253C89D0002C59A5 /* Assets.xcassets in Resources */,
 				D54FA00A253E16270077820B /* PersonCard.xib in Resources */,
 				D54F9FFE253DFBA30077820B /* Auth.storyboard in Resources */,
