@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tKi-V9-ORk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mFr-j1-eLS">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="tKi-V9-ORk" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l8D-3O-dyA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qlG-OM-2Md" kind="relationship" relationship="rootViewController" id="ClA-Nm-gaL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7I-Pi-rnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736" y="100"/>
+        </scene>
+        <!--Matching View Controller-->
+        <scene sceneID="Zm8-Ss-wqi">
+            <objects>
+                <viewController storyboardIdentifier="Matching" modalPresentationStyle="fullScreen" id="qlG-OM-2Md" customClass="MatchingViewController" customModule="PalmuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DiQ-Aq-icD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vwV-Vk-avP">
+                                <rect key="frame" x="15" y="84" width="384" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="5dg-8F-wUd"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Matching"/>
+                                    <segment title="Liked"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="PrimaryColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCX-rE-FHP">
+                                <rect key="frame" x="20" y="134" width="374" height="728"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="LightColor"/>
+                        <constraints>
+                            <constraint firstItem="cCX-rE-FHP" firstAttribute="top" secondItem="vwV-Vk-avP" secondAttribute="bottom" constant="15" id="1qJ-4Q-zdD"/>
+                            <constraint firstItem="wvI-IT-A9Q" firstAttribute="trailing" secondItem="vwV-Vk-avP" secondAttribute="trailing" constant="15" id="7IY-rP-i5h"/>
+                            <constraint firstItem="cCX-rE-FHP" firstAttribute="leading" secondItem="wvI-IT-A9Q" secondAttribute="leading" constant="20" id="Cmj-TB-9VJ"/>
+                            <constraint firstItem="wvI-IT-A9Q" firstAttribute="trailing" secondItem="cCX-rE-FHP" secondAttribute="trailing" constant="20" id="YPI-QE-stS"/>
+                            <constraint firstItem="vwV-Vk-avP" firstAttribute="leading" secondItem="wvI-IT-A9Q" secondAttribute="leading" constant="15" id="chc-Pw-r6i"/>
+                            <constraint firstItem="vwV-Vk-avP" firstAttribute="top" secondItem="wvI-IT-A9Q" secondAttribute="top" constant="40" id="hOF-Wf-74V"/>
+                            <constraint firstItem="wvI-IT-A9Q" firstAttribute="bottom" secondItem="cCX-rE-FHP" secondAttribute="bottom" id="udl-RU-rFL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wvI-IT-A9Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nJu-9e-buj"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cardsContainerView" destination="jvA-2s-p69" id="Kpu-7L-OK0"/>
+                        <outlet property="containerView" destination="cCX-rE-FHP" id="QSi-ks-LTX"/>
+                        <outlet property="likeButton" destination="rpz-PS-j5b" id="Yux-nS-c2g"/>
+                        <outlet property="segmentedControl" destination="vwV-Vk-avP" id="YeR-FP-Xy2"/>
+                        <outlet property="skipButton" destination="DNd-X6-5jh" id="ENm-9A-ECd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYc-X8-NW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76.811594202898561" y="99.776785714285708"/>
+        </scene>
+        <!--Matching Gallery View Controller-->
+        <scene sceneID="Agm-Z4-ZZq">
+            <objects>
+                <viewController storyboardIdentifier="MatchingGallery" id="Vxu-IF-luq" customClass="MatchingGalleryViewController" customModule="PalmuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x8N-S5-bsY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvA-2s-p69" customClass="SwipeView" customModule="PalmuDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="761"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1P7-2M-LRS">
+                                <rect key="frame" x="107" y="801" width="200" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNd-X6-5jh">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="E22-0v-Jzy"/>
+                                            <constraint firstAttribute="width" constant="80" id="rHC-j6-7vF"/>
+                                        </constraints>
+                                        <color key="tintColor" name="SecondaryColor"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-PS-j5b">
+                                        <rect key="frame" x="120" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="udo-oN-6up"/>
+                                            <constraint firstAttribute="width" constant="80" id="xnW-vq-vi3"/>
+                                        </constraints>
+                                        <color key="tintColor" name="PrimaryColor"/>
+                                        <state key="normal" image="heart.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jvA-2s-p69" secondAttribute="trailing" id="4eB-pY-zzi"/>
+                            <constraint firstItem="jvA-2s-p69" firstAttribute="top" secondItem="x8N-S5-bsY" secondAttribute="top" id="5zu-ES-44b"/>
+                            <constraint firstItem="jvA-2s-p69" firstAttribute="leading" secondItem="x8N-S5-bsY" secondAttribute="leading" id="Qez-CK-9Xo"/>
+                            <constraint firstItem="1P7-2M-LRS" firstAttribute="top" secondItem="jvA-2s-p69" secondAttribute="bottom" constant="40" id="QmO-kB-Cae"/>
+                            <constraint firstItem="1P7-2M-LRS" firstAttribute="centerX" secondItem="x8N-S5-bsY" secondAttribute="centerX" id="RKn-J8-6KD"/>
+                            <constraint firstAttribute="bottom" secondItem="1P7-2M-LRS" secondAttribute="bottom" constant="15" id="aQN-Gq-tpC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OCV-2B-CL3"/>
+                    </view>
+                    <connections>
+                        <outlet property="likeButton" destination="rpz-PS-j5b" id="8S1-IG-ns4"/>
+                        <outlet property="skipButton" destination="DNd-X6-5jh" id="3UD-gS-XWA"/>
+                        <outlet property="swipeView" destination="jvA-2s-p69" id="Z8K-Nd-A3q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ynm-4v-g7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="100"/>
+        </scene>
+        <!--Liked View Controller-->
+        <scene sceneID="yjX-y2-jhF">
+            <objects>
+                <viewController storyboardIdentifier="Liked" id="bWZ-JL-fig" customClass="LikedViewController" customModule="PalmuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cvc-mP-omY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CNG-4q-Qcw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOj-q4-R3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="100"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" name="PrimaryColor"/>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="LightColor">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.92900002002716064" green="0.2669999897480011" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryColor">
+            <color red="0.70200002193450928" green="0.54100000858306885" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

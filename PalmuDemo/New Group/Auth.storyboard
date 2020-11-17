@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QQj-Wn-Hnm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XnB-CJ-zFJ">
+            <objects>
+                <navigationController storyboardIdentifier="Nav" modalPresentationStyle="fullScreen" id="QQj-Wn-Hnm" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="arrow.left" catalog="system" backIndicatorTransitionMaskImage="arrow.left" id="swK-Z7-EB6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dl4-Gw-9kd" kind="relationship" relationship="rootViewController" id="YDn-Hd-lYC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4b-yU-Wjq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1257" y="141"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="rDn-DR-Z7X">
+            <objects>
+                <viewController storyboardIdentifier="SignIn" id="Dl4-Gw-9kd" customClass="SignInViewController" customModule="PalmuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIp-Ty-i6e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="goP-le-Fou">
+                                <rect key="frame" x="20" y="138" width="374" height="296.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLF-IO-wl3">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-j4-1sB" customClass="AuthTextField" customModule="PalmuDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="53.5" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="L2d-yG-Efr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="Mail"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="PrimaryColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="siP-DM-q4D" customClass="AuthTextField" customModule="PalmuDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="123.5" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="JRu-z8-Yip"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="Padlock"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="PrimaryColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SN-YC-1qo">
+                                        <rect key="frame" x="0.0" y="193.5" width="374" height="50"/>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="NBN-gt-DEY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" name="LightColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TL-sV-Jra">
+                                        <rect key="frame" x="0.0" y="263.5" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="New here? Sign up">
+                                            <color key="titleColor" name="PrimaryColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="LightColor"/>
+                        <constraints>
+                            <constraint firstItem="goP-le-Fou" firstAttribute="top" secondItem="mmC-gq-zg4" secondAttribute="top" constant="50" id="6jY-Xi-NUo"/>
+                            <constraint firstItem="goP-le-Fou" firstAttribute="leading" secondItem="mmC-gq-zg4" secondAttribute="leading" constant="20" id="UbK-PF-eo9"/>
+                            <constraint firstItem="mmC-gq-zg4" firstAttribute="trailing" secondItem="goP-le-Fou" secondAttribute="trailing" constant="20" id="nVi-7q-3mS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mmC-gq-zg4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jpZ-ht-0fv"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="CaM-j4-1sB" id="Am3-9l-c4c"/>
+                        <outlet property="passwordTextField" destination="siP-DM-q4D" id="FtU-LV-3gC"/>
+                        <outlet property="signInButton" destination="0SN-YC-1qo" id="QIv-Ru-TYi"/>
+                        <outlet property="signUpButton" destination="4TL-sV-Jra" id="oqp-He-Uq9"/>
+                        <segue destination="PHT-Tm-x7F" kind="show" identifier="goToSignUp" id="wvS-SW-z44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u82-H1-8rH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-428" y="141"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="JI7-SN-4HL">
+            <objects>
+                <viewController id="PHT-Tm-x7F" customClass="SignUpViewController" customModule="PalmuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6u9-4h-znI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JP1-j7-U0G">
+                                <rect key="frame" x="20" y="138" width="374" height="313.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join us today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEP-Qw-iMR">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfq-CA-2Jc" customClass="AuthTextField" customModule="PalmuDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="53.5" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5Mc-tV-PEt"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="q4z-JG-j4t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5WN-hV-YMe" customClass="AuthTextField" customModule="PalmuDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="123.5" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="P4O-uN-kOx"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="exN-85-kJN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XuX-yC-5s8" customClass="AuthTextField" customModule="PalmuDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="193.5" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dWy-GD-fsO"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="mks-xt-ZZg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq0-bf-5r6">
+                                        <rect key="frame" x="0.0" y="263.5" width="374" height="50"/>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="YdE-sx-c2f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" name="LightColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="LightColor"/>
+                        <constraints>
+                            <constraint firstItem="JP1-j7-U0G" firstAttribute="top" secondItem="UW1-8s-0We" secondAttribute="top" constant="50" id="Spg-I6-WTw"/>
+                            <constraint firstItem="JP1-j7-U0G" firstAttribute="leading" secondItem="UW1-8s-0We" secondAttribute="leading" constant="20" id="sqC-df-OfZ"/>
+                            <constraint firstItem="UW1-8s-0We" firstAttribute="trailing" secondItem="JP1-j7-U0G" secondAttribute="trailing" constant="20" id="yjH-ZW-5UM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UW1-8s-0We"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c7q-cF-VMj"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="5WN-hV-YMe" id="sEs-lG-EGw"/>
+                        <outlet property="passwordTextField" destination="XuX-yC-5s8" id="wbk-4J-bPG"/>
+                        <outlet property="signUpButton" destination="Cq0-bf-5r6" id="QDN-Zi-D5f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiC-qc-pFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="141"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" name="PrimaryColor"/>
+    <resources>
+        <image name="Mail" width="32" height="32"/>
+        <image name="Padlock" width="32" height="32"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <namedColor name="LightColor">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.92900002002716064" green="0.2669999897480011" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
